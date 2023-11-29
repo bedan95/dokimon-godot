@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://nhya1pu7085k"]
+
+[ext_resource type="Script" path="res://Battle Scene/battle.gd" id="1_08ukh"]
+[ext_resource type="Texture2D" uid="uid://cb3ej25lnnac4" path="res://Free Sample/Battle/spr_battle_free.png" id="1_omdm8"]
+
+[node name="Battle" type="CanvasLayer"]
+script = ExtResource("1_08ukh")
+
+[node name="SprBattleFree" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_omdm8")
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(348, 432)
+
+[node name="Enemy" type="Node2D" parent="."]
+position = Vector2(804, 297)
