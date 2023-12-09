@@ -1,6 +1,9 @@
 extends Node
 
 
+func _ready():	
+	addDokiMon("PinkMon")
+	
 var dataBaseDokiMons = {
 	0 : {
 		"Name": "PinkMon",
@@ -131,10 +134,6 @@ var dataBaseDokiMons = {
 var SelectedDokimons = {
 	
 }
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 func addDokiMon(Name):
 	for i in dataBaseDokiMons:

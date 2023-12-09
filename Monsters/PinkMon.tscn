@@ -7,6 +7,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wvsq"]
 
+[sub_resource type="Animation" id="Animation_buqob"]
+resource_name = "Capture"
+
 [sub_resource type="Animation" id="Animation_063xa"]
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -59,9 +62,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(0.01, 0.01), Vector2(1, 1)]
 }
-
-[sub_resource type="Animation" id="Animation_buqob"]
-resource_name = "Capture"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y1n2j"]
 _data = {

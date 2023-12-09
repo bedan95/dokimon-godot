@@ -79,11 +79,9 @@ show_percentage = false
 
 [node name="Player" type="Node2D" parent="."]
 position = Vector2(348, 432)
-scale = Vector2(3, 3)
 
 [node name="Enemy" type="Node2D" parent="."]
 position = Vector2(804, 297)
-scale = Vector2(2.5, 2.5)
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -318,8 +316,5 @@ show_percentage = false
 [connection signal="pressed" from="UI/Menu/GridContainer/Fight" to="UI" method="_on_fight_pressed"]
 [connection signal="pressed" from="UI/Menu/GridContainer/Switch" to="UI" method="_on_switch_pressed"]
 [connection signal="pressed" from="UI/Menu/GridContainer/Flee" to="UI" method="_on_flee_pressed"]
-[connection signal="pressed" from="UI/Fight/GridContainer/Attack 1" to="UI" method="_on_attack_pressed" binds= [0]]
-[connection signal="pressed" from="UI/Fight/GridContainer/Attack 3" to="UI" method="_on_attack_pressed" binds= [2]]
-[connection signal="pressed" from="UI/Fight/GridContainer/Attack 2" to="UI" method="_on_attack_pressed" binds= [1]]
 [connection signal="pressed" from="UI/Fight/GridContainer/Back" to="UI" method="_on_back_pressed"]
 [connection signal="pressed" from="UI/Switch/GridContainer/Back" to="UI" method="_on_back_pressed"]
