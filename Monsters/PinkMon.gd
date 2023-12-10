@@ -5,6 +5,7 @@ var Level = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Panel.hide()
 	Level = randi_range(1,5)
 	spawn()
 	$Aim/Attack.hide()
@@ -23,4 +24,4 @@ func _on_attack_animation_finished():
 func capture():
 	$AnimationPlayer.play("Capture", -1, 3)
 	await $AnimationPlayer.animation_finished
-	get_parent().get_parent()._one_flee_pressed()
+	$"../../UI"._one_flee_pressed()

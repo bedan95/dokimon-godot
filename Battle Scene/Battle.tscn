@@ -28,16 +28,6 @@ position = Vector2(576, 324)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("2_y8reh")
 
-[node name="Action" type="Label" parent="SprBattleFree"]
-offset_left = -114.444
-offset_top = 41.5556
-offset_right = 9.55556
-offset_bottom = 67.5556
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 9
-text = "This is an action..."
-autowrap_mode = 3
-
 [node name="MonsterUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -50,32 +40,34 @@ script = ExtResource("3_ccgsw")
 
 [node name="Info" type="Label" parent="MonsterUI"]
 layout_mode = 0
-offset_left = -95.5
+offset_left = -95.0
 offset_top = -68.0
-offset_right = 28.5
-offset_bottom = -42.0
+offset_right = 29.0
+offset_bottom = -48.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
 text = "Dokimon lvl 100"
 
-[node name="HpTxt" type="Label" parent="MonsterUI"]
-layout_mode = 0
-offset_left = 55.5
-offset_top = -67.0
-offset_right = 98.5
-offset_bottom = -41.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "10/10"
-
-[node name="ProgressBar" type="ProgressBar" parent="MonsterUI"]
+[node name="HPBar" type="ProgressBar" parent="MonsterUI"]
 layout_mode = 0
 offset_left = -53.5
-offset_top = -45.5
+offset_top = -45.0
 offset_right = 106.5
-offset_bottom = -35.5
+offset_bottom = -35.0
 theme_override_styles/background = SubResource("StyleBoxEmpty_t3fi8")
 theme_override_styles/fill = SubResource("StyleBoxFlat_1vy6i")
 value = 50.0
 show_percentage = false
+
+[node name="HpTxt" type="Label" parent="MonsterUI"]
+layout_mode = 0
+offset_left = -52.0
+offset_top = -47.0
+offset_right = -9.0
+offset_bottom = -21.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "10/10"
 
 [node name="Player" type="Node2D" parent="."]
 position = Vector2(348, 432)
@@ -84,6 +76,16 @@ scale = Vector2(3, 3)
 [node name="Enemy" type="Node2D" parent="."]
 position = Vector2(804, 297)
 scale = Vector2(2.5, 2.5)
+
+[node name="Action" type="Label" parent="."]
+offset_left = 53.0
+offset_top = 524.0
+offset_right = 589.0
+offset_bottom = 614.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "This is an action..."
+autowrap_mode = 3
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -293,16 +295,8 @@ offset_top = 105.5
 offset_right = 362.0
 offset_bottom = 131.5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
 text = "Dokimon lvl 100"
-
-[node name="HpTxt" type="Label" parent="UI"]
-layout_mode = 0
-offset_left = 397.5
-offset_top = 135.0
-offset_right = 440.5
-offset_bottom = 161.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "10/10"
 
 [node name="HPBar" type="ProgressBar" parent="UI"]
 layout_mode = 0
@@ -315,11 +309,25 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_1vy6i")
 value = 50.0
 show_percentage = false
 
+[node name="HpTxt" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 126.0
+offset_right = 324.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "10/10"
+
 [connection signal="pressed" from="UI/Menu/GridContainer/Fight" to="UI" method="_on_fight_pressed"]
 [connection signal="pressed" from="UI/Menu/GridContainer/Switch" to="UI" method="_on_switch_pressed"]
+[connection signal="pressed" from="UI/Menu/GridContainer/Capture" to="." method="_on_capture_pressed"]
 [connection signal="pressed" from="UI/Menu/GridContainer/Flee" to="UI" method="_on_flee_pressed"]
 [connection signal="pressed" from="UI/Fight/GridContainer/Attack 1" to="UI" method="_on_attack_pressed" binds= [0]]
 [connection signal="pressed" from="UI/Fight/GridContainer/Attack 3" to="UI" method="_on_attack_pressed" binds= [2]]
 [connection signal="pressed" from="UI/Fight/GridContainer/Attack 2" to="UI" method="_on_attack_pressed" binds= [1]]
 [connection signal="pressed" from="UI/Fight/GridContainer/Back" to="UI" method="_on_back_pressed"]
+[connection signal="pressed" from="UI/Switch/GridContainer/Dokimon 1" to="UI" method="_on_dokimon_pressed" binds= [0]]
+[connection signal="pressed" from="UI/Switch/GridContainer/Dokimon 3" to="UI" method="_on_dokimon_pressed" binds= [2]]
+[connection signal="pressed" from="UI/Switch/GridContainer/Dokimon 2" to="UI" method="_on_dokimon_pressed" binds= [1]]
 [connection signal="pressed" from="UI/Switch/GridContainer/Back" to="UI" method="_on_back_pressed"]

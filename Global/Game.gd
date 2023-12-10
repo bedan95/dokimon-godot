@@ -3,6 +3,7 @@ extends Node
 
 func _ready():	
 	addDokiMon("PinkMon")
+	addDokiMon("PurpleMon")
 	
 var dataBaseDokiMons = {
 	0 : {
@@ -45,7 +46,7 @@ var dataBaseDokiMons = {
 		"MaxExp": 10,
 		"Strength": 10,
 		"Defense": 5,
-		"Scene" : preload("res://Monsters/PinkMon.tscn"),
+		"Scene" : preload("res://Monsters/GreenMon.tscn"),
 		"Attacks" : {
 			0 : {
 				"Name" : "Blast",
@@ -76,38 +77,7 @@ var dataBaseDokiMons = {
 		"MaxExp": 10,
 		"Strength": 10,
 		"Defense": 5,
-		"Scene" : preload("res://Monsters/PinkMon.tscn"),
-		"Attacks" : {
-			0 : {
-				"Name" : "Blast",
-				"Target": "Monster",
-				"Damage": 10,
-				"cost": 2
-			},
-			1 : {
-				"Name" : "Clash",
-				"Target": "Monster",
-				"Damage": 10,
-				"cost": 2
-			},
-			2 : {
-				"Name" : "Impact",
-				"Target": "Monster",
-				"Damage": 10,
-				"cost": 2
-			}
-		}
-	},
-	3 : {
-		"Name": "YellowMon",
-		"Frame": 3,
-		"Health": 100,
-		"Level": 1,
-		"Exp": 0,
-		"MaxExp": 10,
-		"Strength": 10,
-		"Defense": 5,
-		"Scene" : preload("res://Monsters/PinkMon.tscn"),
+		"Scene" : preload("res://Monsters/PurpleMon.tscn"),
 		"Attacks" : {
 			0 : {
 				"Name" : "Blast",
